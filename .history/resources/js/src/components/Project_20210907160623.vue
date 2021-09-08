@@ -1,0 +1,23 @@
+<template>
+  <div>
+      <router-link :to="{ name:'portfolio-page' , params: {id: projectData.id}}">
+    <div class="position-relative rounded hover-wrapper">
+      <img
+        :src="projectData.images"
+        alt="portfolio-image"
+        class="img-fluid rounded w-100 d-block"
+      />
+      <p>{{ projectData.description }}</p>
+      <div class="hover-overlay">
+        <div class="hover-content"></div>
+      </div>
+    </div>
+    </router-link>
+  </div>
+</template>
+<script>
+export default {
+    props: ["projectData"],
+
+}
+</script>
